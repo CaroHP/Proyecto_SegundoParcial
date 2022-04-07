@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ED976A">
+    android:background="@color/white">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        app:cardBackgroundColor="?android:attr/textColorHintInverse"
+        app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,9 +32,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:text="#Capitulos"
+                android:text="@string/capitulos"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toStartOf="@+id/imageViewVideo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSinopsis" />
@@ -46,9 +46,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Sinopsis"
+                android:text="@string/resumen"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/imageViewVideo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewAnimeTitle2" />
@@ -59,29 +59,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:text="Titulo"
+                android:text="@string/Anime"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="34sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintEnd_toEndOf="@+id/textViewSinopsis"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageViewVideo"
-                android:layout_width="94dp"
-                android:layout_height="128dp"
-                android:layout_marginStart="9dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:scaleType="fitStart"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ratingBar"
-                app:layout_constraintTop_toBottomOf="@+id/textViewAnimeTitle2"
-                app:layout_constraintVertical_bias="0.392"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <RatingBar
@@ -90,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:numStars="5"
                 android:scaleX="0.8"
